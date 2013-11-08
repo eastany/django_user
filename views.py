@@ -1,4 +1,3 @@
-
 def getPerm(user):
 	perms_list = []
 	perms = Permission.objects.filter(user=User.objects.get(username=user))
@@ -16,5 +15,3 @@ def addUser(user,pwd,perms):
 		cate = Category.objects.get(types=perms[key])
 		perm = Permission(user=usr,page=page,category=cate)
 		perm.save()
-		
-		
