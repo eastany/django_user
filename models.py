@@ -11,5 +11,6 @@ class Category(models.Model):
 class ownPermission(models.Model):
   page = models.ForeignKey(Page)
   perm = models.ForeignKey(Category)
+  user = models.ForeignKey(User)
   
   
